@@ -18,7 +18,7 @@ npm install watch-object
 
 ## Usage
 ### Global
-```
+```html
 <script src="node_modules/watch-object/dist/watch-object.js"></script>
 <script>
   WatchObject.watch()
