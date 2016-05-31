@@ -86,6 +86,9 @@ watch(list, function (added, removed, index, action) {
 
 list.pop()
 // => undefined, [5], 4, 'pop'
+
+list.splice(2,2,'a','b','c')
+// => ['a','b','c'], [3,4], 2, 'splice'
 ```
 
 ## Remove watchers
@@ -105,6 +108,7 @@ unwatch(obj)
 var obj = {
   _a: 1
 }
+
 Object.defineProperty(obj, 'a', {
   get: function () {
     return this._a
@@ -117,9 +121,8 @@ Object.defineProperty(obj, 'a', {
 })
 
 watch(obj, 'a', function() {})
-
-obj.a // => 1
+// => obj.a === 1
 
 obj.a = 'x'
-// => obj.a = 2
+// => obj.a === 2
 ```
