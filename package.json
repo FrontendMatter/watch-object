@@ -1,6 +1,6 @@
 {
   "name": "watch-object",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Observe changes on JavaScript objects",
   "main": "dist/watch-object.js",
   "author": "Laza Bogdan <laza.bogdan@macro-net.ro>",
