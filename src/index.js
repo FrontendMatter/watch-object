@@ -194,7 +194,25 @@ const defineWatcher = (obj, prop, watcher, level) => {
 	if (newWatcher) {
 		let descriptor = Object.getOwnPropertyDescriptor(obj, prop)
 		if (descriptor !== undefined) {
-			Object.defineProperty(obj['__proxy__'], prop, descriptor)
+			let nd = {
+				enumerable: descriptor.enumerable,
+				configurable: descriptor.configurable
+			}
+			let accessors = ['get', 'set']
+			accessors.forEach(accessor => {
+				if (descriptor[accessor] !== undefined) {
+					nd[accessor] = function (...args) {
+						return descriptor[accessor].apply(obj, args)
+					}
+				}
+			})
+			let data = ['writable', 'value']
+			data.forEach(d => {
+				if (descriptor[d] !== undefined) {
+					nd[d] = descriptor[d]
+				}
+			})
+			Object.defineProperty(obj['__proxy__'], prop, nd)
 		}
 		else {
 			obj['__proxy__'][prop] = obj[prop]
