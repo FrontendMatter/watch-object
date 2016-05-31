@@ -1,8 +1,8 @@
 # watch-object
 
-<!-- [![npm version](https://badge.fury.io/js/watch-object.svg)](https://badge.fury.io/js/watch-object)
+[![npm version](https://badge.fury.io/js/watch-object.svg)](https://badge.fury.io/js/watch-object)
 [![Build Status](https://travis-ci.org/themekit/watch-object.svg?branch=master)](https://travis-ci.org/themekit/watch-object)
-[![Coverage Status](https://coveralls.io/repos/github/themekit/watch-object/badge.svg?branch=master)](https://coveralls.io/github/themekit/watch-object?branch=master) -->
+[![Coverage Status](https://coveralls.io/repos/github/themekit/watch-object/badge.svg?branch=master)](https://coveralls.io/github/themekit/watch-object?branch=master)
 
 Observe changes on JavaScript objects. Based on [Watch.JS](https://github.com/melanke/Watch.JS) with a few differences.
 
