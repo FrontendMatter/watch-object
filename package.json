@@ -1,6 +1,6 @@
 {
   "name": "watch-object",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Observe changes on JavaScript objects",
   "main": "dist/watch-object.js",
   "author": "Laza Bogdan <laza.bogdan@macro-net.ro>",
@@ -45,5 +45,16 @@
     "reactive",
     "reactivity"
   ],
-  "dependencies": {}
+  "dependencies": {},
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/themekit/watch-object.git"
+  },
+  "bugs": {
+    "url": "https://github.com/themekit/watch-object/issues"
+  },
+  "homepage": "https://github.com/themekit/watch-object#readme"
 }
