@@ -294,7 +294,7 @@ const watchMany = (obj, props, watcher, level) => {
 }
 
 const unwatchOne = (obj, prop, watcher) => {
-  if (obj.__watchers__[prop]) {
+  if (obj['__watchers__'] !== undefined  && obj['__watchers__'][prop] !== undefined) {
     if (watcher === undefined) {
       delete obj.__watchers__[prop]
     }

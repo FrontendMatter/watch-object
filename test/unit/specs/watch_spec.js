@@ -1,6 +1,6 @@
 import { watch, unwatch } from 'watch-object'
 
-describe('watch', function () {
+describe('watch-object', function () {
   var spy, obj, list
   
   beforeEach(function () {
@@ -232,6 +232,10 @@ describe('watch', function () {
           expect(Object.keys(obj.__watchers__).length).toBe(0)
         }
       }
+    })
+
+    it('does not fail when called on a plain object', function () {
+      expect(function () { unwatch(obj, 'a', spy) }).not.toThrow()
     })
   })
 })
